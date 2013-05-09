@@ -1,0 +1,25 @@
+<%= form_for(@photoid) do |f| %>
+  <% if @photoid.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photoid.errors.count, "error") %> prohibited this photoid from being saved:</h2>
+
+      <ul>
+      <% @photoid.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :photoname %><br />
+    <%= f.text_field :photoname %>
+  </div>
+  <div class="field">
+    <%= f.label :photopath %><br />
+    <%= f.text_field :photopath %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

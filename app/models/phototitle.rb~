@@ -1,0 +1,5 @@
+class Phototitle < ActiveRecord::Base
+  attr_accessible :phototitle
+  belongs_to :picset
+  has_many :photopaths
+end

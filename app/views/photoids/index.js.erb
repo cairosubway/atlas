@@ -1,0 +1,6 @@
+$('.grid_9').empty();
+$('.grid_9').append($('<div id="atlas"></div>'));
+$('#atlas').html("<%= escape_javascript(render (@photoids)) %>");
+
+Galleria.loadTheme('assets/galleria.classic.min.js');
+Galleria.run('#atlas');

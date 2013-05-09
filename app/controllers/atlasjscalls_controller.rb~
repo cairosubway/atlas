@@ -1,0 +1,83 @@
+class AtlasjscallsController < ApplicationController
+  # GET /atlasjscalls
+  # GET /atlasjscalls.json
+  def index
+    @atlasjscalls = Atlasjscall.all
+
+    respond_to do |format|
+      #format.html # index.html.erb
+      format.js 
+    end
+  end
+
+  # GET /atlasjscalls/1
+  # GET /atlasjscalls/1.json
+  def show
+    @atlasjscall = Atlasjscall.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @atlasjscall }
+    end
+  end
+
+  # GET /atlasjscalls/new
+  # GET /atlasjscalls/new.json
+  def new
+    @atlasjscall = Atlasjscall.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @atlasjscall }
+    end
+  end
+
+  # GET /atlasjscalls/1/edit
+  def edit
+    @atlasjscall = Atlasjscall.find(params[:id])
+  end
+
+  # POST /atlasjscalls
+  # POST /atlasjscalls.json
+  def create
+    @atlasjscall = Atlasjscall.new(params[:atlasjscall])
+
+    respond_to do |format|
+      if @atlasjscall.save
+        format.html { redirect_to @atlasjscall, notice: 'Atlasjscall was successfully created.' }
+        format.json { render json: @atlasjscall, status: :created, location: @atlasjscall }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @atlasjscall.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /atlasjscalls/1
+  # PUT /atlasjscalls/1.json
+  def update
+    @atlasjscall = Atlasjscall.find(params[:id])
+
+    respond_to do |format|
+      if @atlasjscall.update_attributes(params[:atlasjscall])
+        format.html { redirect_to @atlasjscall, notice: 'Atlasjscall was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @atlasjscall.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /atlasjscalls/1
+  # DELETE /atlasjscalls/1.json
+  def destroy
+    @atlasjscall = Atlasjscall.find(params[:id])
+    @atlasjscall.destroy
+
+    respond_to do |format|
+      format.html { redirect_to atlasjscalls_url }
+      format.json { head :no_content }
+    end
+  end
+end

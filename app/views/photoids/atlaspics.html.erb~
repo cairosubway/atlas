@@ -1,0 +1,30 @@
+<head>
+<h1>Atlas Pics<h1>
+</head>
+
+<body>
+	<div class="container_12">
+
+
+
+<% @photoids.each do |photoid| %>
+<ul>
+  <li><%= photoid.photopath %></li>
+
+<% end %>
+
+</ul>    
+
+
+		<div id="galleria">
+
+            		<img src="assets/1.jpg">
+            		<img src="assets/2.jpg">
+            	</div>
+	<script>
+            Galleria.loadTheme('assets/galleria.classic.min.js');
+            Galleria.run('#galleria');
+        </script>
+		
+	</div>    
+</body>

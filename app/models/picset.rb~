@@ -1,0 +1,5 @@
+class Picset < ActiveRecord::Base
+  attr_accessible :picset
+  has_many :phototitles
+  accepts_nested_attributes_for :phototitles
+end

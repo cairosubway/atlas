@@ -1,0 +1,25 @@
+<h1>Listing photoids</h1>
+
+<table>
+  <tr>
+    <th>Photoname</th>
+    <th>Photopath</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%= @photoids.each do |photoid| %>
+  <tr>
+    <td><%= photoid.photoname %></td>
+    <td><%= photoid.photopath %></td>
+    <td><%= link_to 'Show', photoid %></td>
+    <td><%= link_to 'Edit', edit_photoid_path(photoid) %></td>
+    <td><%= link_to 'Destroy', photoid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Photoid', new_photoid_path %>

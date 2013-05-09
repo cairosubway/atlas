@@ -1,0 +1,17 @@
+<%= form_for(@mak) do |f| %>
+  <% if @mak.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mak.errors.count, "error") %> prohibited this mak from being saved:</h2>
+
+      <ul>
+      <% @mak.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

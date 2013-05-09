@@ -1,0 +1,3 @@
+$('#picspace').html("<%= escape_javascript( render( :partial => "photoids/photoid") ) %>");
+
+

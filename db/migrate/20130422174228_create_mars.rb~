@@ -1,0 +1,11 @@
+class CreateMars < ActiveRecord::Migration
+  def change
+      drop_table :mars    
+      create_table :mars do |t|
+      t.string :photoname
+      t.string :photopath
+
+      t.timestamps
+    end
+  end
+end

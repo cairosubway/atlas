@@ -1,0 +1,32 @@
+<head>
+<h1>Atlas<h1>
+</head>
+<style>
+    #galleria{ width: 700px; height: 400px; background: #000 }
+</style>
+<body>
+	<div class="container_12">
+
+<ul>
+
+<% @photoids.each do |photoid| %>
+
+  <li><%= photoid.photopath %></li>
+
+<% end %>
+
+</ul>    
+
+
+		<div id="galleria">
+
+            		<img src="assets/1.jpg">
+            		<img src="assets/2.jpg">
+            	</div>
+	<script>
+            Galleria.loadTheme('assets/galleria.classic.min.js');
+            Galleria.run('#galleria');
+        </script>
+		
+	</div>    
+</body>

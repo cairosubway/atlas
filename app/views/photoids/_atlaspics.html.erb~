@@ -1,0 +1,14 @@
+<style>
+    #galleria{ width: 600px; height: 400px; background: #000 }
+</style>
+<div id="galleria">
+<% @photoids.each do |photoid| %>
+<img src="<%= photoid.photopath %>">
+<% end %>
+</div>
+
+
+<script>
+Galleria.loadTheme('assets/galleria.classic.min.js');
+Galleria.run('#galleria');
+</script>

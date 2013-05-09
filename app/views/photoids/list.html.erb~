@@ -1,0 +1,3 @@
+<% @photoids.each do |photoid| %>
+<img src="<%= photoid.photopath %>">
+

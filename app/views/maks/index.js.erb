@@ -1,0 +1,6 @@
+$('.grid_9').empty();
+$('.grid_9').append($('<div id="mk"></div>'));
+$('#mk').html("<%= escape_javascript(render(@maks)) %>");
+
+Galleria.loadTheme('assets/galleria.classic.min.js');
+Galleria.run('#mk');

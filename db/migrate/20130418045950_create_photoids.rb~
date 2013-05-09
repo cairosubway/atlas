@@ -1,0 +1,8 @@
+class CreatePhotoids < ActiveRecord::Migration
+  def change
+    create_table :photoids do |t|
+
+      t.timestamps
+    end
+  end
+end

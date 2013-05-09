@@ -1,0 +1,2 @@
+module PhotoidsHelper
+end

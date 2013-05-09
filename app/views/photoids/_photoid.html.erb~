@@ -1,0 +1,14 @@
+<style>
+    #galleria{ width: 600px; height: 400px; background: #000 }
+</style>
+<div id="galleria">
+<img src="<%= photoid.photopath %>">
+</div>
+
+
+
+
+<script>
+Galleria.loadTheme('assets/galleria.classic.min.js');
+Galleria.run('#galleria');
+</script>

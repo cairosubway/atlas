@@ -1,0 +1,2 @@
+module MaksHelper
+end

@@ -1,0 +1,9 @@
+class CreatePicsets < ActiveRecord::Migration
+  def change
+    create_table :picsets do |t|
+      t.string :picsetname
+      
+      t.timestamps
+    end
+  end
+end

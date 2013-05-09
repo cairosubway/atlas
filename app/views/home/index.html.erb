@@ -1,0 +1,41 @@
+<style>
+    #atlas{ width: 700px; height: 525px; background: #000; float:left; display: inline; color: white }
+    #mk{ width: 700px; height: 525px; background: #000; float:left; display: inline; color: white }
+</style>
+
+<div class="container_12">
+		<div class="grid_3">
+				<div class="grid_2">
+					<h1>Atlas<h1>
+					<h2>Marrakesh, Morocco and the Atlas Mountains<h2>
+				</div>
+				<div class="grid_2">
+					<%= link_to photoids_path, :'data-remote' => true do %>
+					<%= image_tag '/assets/atlas.png' %>
+					<% end %>									
+				</div>
+				<div class="grid_2">
+					<%= link_to photoids_path, :'data-remote' => true do %>
+					<p>Atlas Mountains</p>
+					<% end %>
+				</div>				
+				<div class="grid_2">
+					<%= link_to maks_path, :'data-remote' => true do %>
+					<%= image_tag '/assets/47.png' %>
+					<% end %>					
+				</div>
+				<div class="grid_2">
+					<%= link_to maks_path, :'data-remote' => true do %>
+					<p>Marrakesh</p>
+					<% end %>
+				</div>
+				<div class="grid_2">
+					<p id="email"><a href="mailto:andrew@atlas.cairosubway.com">andrew@atlas.cairosubway.com</a></p>
+				</div>
+
+		</div>		
+			<div class="grid_9">
+			<img src="assets/19.jpg">	
+			</div>
+</div>    
+
